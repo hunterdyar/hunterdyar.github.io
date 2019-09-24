@@ -1,6 +1,6 @@
---
+---
 title: H Dyar
---
+---
 ## H Dyar
 Hello. I'm Hugh Huntington Dyar IV.
 *(Most people call me "Hunter", "HD" or "Smokey")*
