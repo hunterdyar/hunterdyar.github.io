@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>cardstereographboard</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="aframe-stereo-component.js"></script>
+    <script type="text/javascript" src="./libgif.js"></script>
+
+  </head>
+  <body>
+
+    <a-scene renderer="antialias:true">
+      <!-- Paths to left and right images -->
+      <a-assets>
+        <img id="left" src="gallery/1l.jpg" rel:auto_play="0"  />
+        <img id="right" src="gallery/1r.jpg" rel:auto_play="0" />
+
+      </a-assets>
+
+      <a-box src="#left" position="0 0 -3" scale="3 4 0.1" stereo="eye:left"></a-box>
+      <a-box src="#right" position="0 0 -3" scale="3 4 0.1" stereo="eye:right"></a-box>
+
+
+      <!-- Camera -->
+      <a-entity camera look-controls position="0 0 0" stereocam="eye:left;"></a-entity>
+
+
+      <!-- or alternatively -->
+
+      <!--<a-sky id="sky1" src="http://i.imgur.com/YAaxpv6.jpg" stereo="eye:left"></a-sky>-->
+      <!--<a-sky id="sky2" src="http://i.imgur.com/JUxTnzK.jpg" stereo="eye:right"></a-sky>-->
+
+
+    </a-scene>
+
+  </body>
+</html>

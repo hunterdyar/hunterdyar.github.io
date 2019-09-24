@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>My A-Frame Scene</title>
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+    <script src="aframe-stereo-component.js.min.js"></script>
+    <script type="text/javascript" src="./libgif.js"></script>
+
+  </head>
+  <body>
+
+
+
+        <img id="left" src="gallery/1.gif" rel:auto_play="0" width = "500px" height = "500px" />
+        <img id="right" src="gallery/1.gif" rel:auto_play="0"  width = "500px" height = "500px" />
+
+      <script type="text/javascript">
+        var lsg = new SuperGif({ gif: document.getElementById('left') } );
+        lsg.load(function(){
+            lsg.move_to(0);
+            lsg.pause();
+        });
+
+        var rsg = new SuperGif({ gif: document.getElementById('right') } );
+        rsg.load(function(){
+            rsg.move_to(1);
+            rsg.pause();
+        });
+
+        console.log('did the thing');
+    </script>
+
+
+
+  </body>
+</html>
